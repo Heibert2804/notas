@@ -1,0 +1,2 @@
+//.pop() =elimina el ultimo nodo, es decir, el tope y baja el tope en 1--.push() = inserta un nodo y aumenta el tpoe a 1--.isfull() = si la pila no ha terminado, no esta vacia-- .isEmpty() = valida si la pila esta vacia-- .peek muestra el ultimo valor ingresado en el tope
+//se utiliza Stack<tipo de dato o objeto>, con pila sy colas se uas .size no .lenthg 
