@@ -52,5 +52,59 @@ public class pilasnuevas {
         System.out.println(p);
         
     }
+
+    public int Pedirdato(int opt) {
+        pilasnuevas m = new pilasnuevas();
+        switch (opt) {
+            case 1:
+                System.out.println("Ingrese El numero a Modificar");
+                opt = m.ValidarEntero(sc);
+                break;
+            case 2:
+                System.out.println("Ingrese El nuevo numero Modificado");
+                opt = m.ValidarEntero(sc);
+                break;
+
+            default:
+                System.out.println("Ingrese el numero a eliminar");
+                opt = m.ValidarEntero(sc);
+                break;
+        }
+        return opt;
+
+    }
+
+    public Stack<Integer> ModificarPila(Stack<Integer> pila, int numero) {
+        Stack<Integer> Auxp = new Stack<>();
+        pilasnuevas m = new pilasnuevas();
+        int n = pila.size();
+        for (int i = 0; i < n; i++) {
+            if (pila.peek().equals(numero)) {
+                pila.pop();
+                Auxp.push(m.Pedirdato(2));
+            } else {
+                Auxp.push(pila.pop());
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            pila.push(Auxp.pop());
+        }
+        return pila;
+    }
     
+    public Stack<Integer> EliminarPila(Stack<Integer> p, int numero) {
+        Stack<Integer> Auxp = new Stack<>();
+        int n = p.size();
+        for (int i = 0; i < n; i++) {
+            if (p.peek().equals(numero)) {
+                p.pop();
+            } else {
+                Auxp.push(p.pop());
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            p.push(Auxp.pop());
+        }
+        return p;
+    }
 }
