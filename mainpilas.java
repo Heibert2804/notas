@@ -36,7 +36,7 @@ public class mainpilas {
                     choise = sc.nextInt();
                     switch (choise) {
                         case 1:
-                            pila = m.Eliminar(pila, numero);
+                            pila = m.EliminarPila(pila, numero);
                             break;
                         case 2:
                             pila = m.Eliminar1(pila, numero);
